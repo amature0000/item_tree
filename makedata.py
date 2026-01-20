@@ -18,7 +18,7 @@ def get_items(column_name):
         inp = input("> ").strip()
         if inp.lower() == "":
             break
-        if "/" in inp:
+        if "#" in inp:
             name, qty = inp.split("#", 1)
             item_str = f"{name.strip()} ×{qty.strip()}"
             items.append(item_str)
