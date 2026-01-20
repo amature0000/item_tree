@@ -1,0 +1,100 @@
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+
+    input {
+        width: 300px;
+        padding: 6px;
+        margin-bottom: 10px;
+    }
+
+    #item-list div {
+        cursor: pointer;
+        padding: 4px;
+    }
+
+    #item-list div:hover {
+        background: #eee;
+    }
+
+    #tree {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .tree-node {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .node-box {
+        border: 2px solid #333;
+        padding: 10px;
+        min-width: 240px;
+        background: #fafafa;
+        box-sizing: border-box;
+    }
+
+    .section-title {
+        font-weight: bold;
+        margin-top: 6px;
+        border-top: 1px solid #aaa;
+        padding-top: 4px;
+    }
+
+    .item {
+        cursor: pointer;
+        color: blue;
+    }
+
+    .item.disabled {
+        cursor: default;
+        color: black;
+    }
+
+    .children {
+        display: flex;
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .one-wrapper {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .ellipsis {
+        cursor: default;
+    }
+
+    .one-tooltip {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        color: black;
+        padding: 6px;
+        border-radius: 4px;
+        font-size: 12px;
+        white-space: nowrap;
+        z-index: 10;
+        border: 1px solid black;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .one-wrapper:hover .one-tooltip {
+        display: block;
+    }
+    #item-list {
+  max-height: 600px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+}
