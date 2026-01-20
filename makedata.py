@@ -27,7 +27,7 @@ def get_items(column_name):
     return items
 
 def get_output():
-    print("\n--- Output 입력 ---")
+    print("\n--- Output 입력 (미입력 시 작성 완료) ---")
     inp = input("> ").strip()
     return [inp]
 
@@ -36,6 +36,7 @@ def get_output():
 while True:
     # output, ingredients, tools, etc 입력
     output = get_output()
+    if output == "": break
     ingredients = get_items("Ingredients")
     tools = get_items("Tools")
     etc = get_items("etc")
@@ -43,10 +44,6 @@ while True:
     # 입력한 데이터 추가
     entry = [ingredients, tools, etc, output]
     data.append(entry)
-
-    cont = input("\n아무 단어나 입력하여 다음 아이템 작성: ").strip().lower()
-    if cont == "":
-        break
 
 # json 저장
 with open(filename, "w", encoding="utf-8") as f:
