@@ -4,7 +4,6 @@ const data = [
       "qwer"
     ],
     [
-      "asdo"
     ],
     [],
     [
